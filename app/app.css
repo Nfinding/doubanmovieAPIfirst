@@ -1,0 +1,154 @@
+@charset "UTF-8";
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+fieldset, img, input, button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline-style: none;
+}
+ul, ol {
+  list-style: none;
+}
+input {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: "SimSun", "宋体";
+}
+select, input {
+  vertical-align: middle;
+}
+select, input, textarea {
+  font-size: 12px;
+  margin: 0;
+}
+textarea {
+  resize: none;
+}
+/*防止拖动*/
+img {
+  border: 0;
+  vertical-align: middle;
+}
+/*  去掉图片低测默认的3像素空白缝隙*/
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1; /*IE/7/6*/
+}
+table {
+  border-collapse: collapse;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 100%;
+}
+s, i, em {
+  font-style: normal;
+  text-decoration: none;
+}
+.w {
+  /*版心 提取 */
+  width: 1000px;
+  margin: 0 auto;
+}
+.fl {
+  float: left
+}
+.fr {
+  float: right
+}
+body{
+  background-color: #F0F3F5;
+}
+.top{
+  background-color: #545652;
+  line-height: 30px;
+  overflow: hidden;
+  color: #D5D5D5;
+  font-size: 12px;
+}
+.search-box{
+  padding: 10px 0;
+  overflow: hidden;
+  border-bottom: 1px solid #E1E8EC;
+}
+.search{
+   padding: 8px 0 0 170px;
+}
+.search input{
+  width: 470px;
+  height: 34px;
+  color: #ccc;
+  padding-left: 8px;
+  font-size: 14px;
+  border-radius: 5px 0 0 5px;
+  border-bottom: 1px solid #8B959E;
+
+}
+.search button{
+  width: 40px;
+  height: 35px;
+  background: #8B959E url(images/nav_bg_a1.png) no-repeat center center;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+.nav{
+  width: 170px;
+  height: 500px;
+  padding-top: 20px;
+  background-color: #E1E8EC;
+}
+.nav li{
+  padding-left: 20px;
+  line-height: 35px;
+  color: #2277AA;
+  cursor: pointer;
+  }
+.nav li.current  {
+  background-color: #238CCD;
+  color: #fff;
+}
+.db-dy{
+  width: 810px;
+  background-color: #fff;
+  // height: 500px;
+  padding: 0 0 20px 11px;
+}
+.db-dy li{
+  width: 150px;
+  height: 255px;
+  float: left;
+  padding-top: 20px;
+  margin-right: 12px;
+  text-align: center;
+}
+.db-dy li img{
+  width: 150px;
+  height: 210px;
+}
+.db-dy li p{
+  display: inline-block;
+  line-height: 25px;
+  color: #2277AA;
+  padding-left: 20px;
+  background: url(images/new.png) no-repeat left center;
+}
+.db-dy li p span{
+  color: red;
+}
+.coming,.dy-top{
+  display: none;
+}
