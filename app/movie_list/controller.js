@@ -12,7 +12,9 @@
         var count = 20;
         var queryParams = {
             start: ($scope.pageNum - 1) * count,
-            count: count
+            count: count,
+            q:$routeParams.q
+
         };
         $scope.changePage = function(pNum) {
                 $scope.pageNum = pNum;

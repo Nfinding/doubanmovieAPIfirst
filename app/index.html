@@ -16,14 +16,17 @@
             </div>
         </div>
     </div>
-    <div class="search-box">
+    <div class="search-box" ng-controller="searchController">
         <div class="w">
             <div class="logo fl">
                 <a href="#"><img src="images/logo.png"></a>
             </div>
             <div class="search fl">
-                <input id="search" class="fl" type="text" placeholder="电影、明星、影院、电视剧">
-                <button class="fl"></button>
+              <form  ng-submit="search">
+                <input id="search" class="fl" type="text" placeholder="电影、明星、影院、电视剧" ng-model= "searchContent">
+                <button class="fl" ng-click="search()"></button>
+              </form>
+
             </div>
         </div>
     </div>
