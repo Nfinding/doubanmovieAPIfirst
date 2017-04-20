@@ -2,7 +2,7 @@
     <div class="have">
         <ul>
             <li ng-repeat="movie in subjects">
-                <a href="#"><img ng-src="{{movie.images.large}}"></a>
+                <a ng-href="{{'#!/movie_detail/'+movie.id}}"><img ng-src="{{movie.images.large}}"></a>
                 <p><span ng-bind="movie.title"></span> &nbsp;<span ng-bind="movie.rating.average"></span></p>
             </li>
         </ul>
@@ -17,7 +17,7 @@
         <span></span>
         <span></span>
     </div>
-    <div>
+    <div ng-if="!loading">
         <span class="fl">当前页:{{pageNum}}  <button ng-click="changePage(pageNum-0+1)">下一页</button></span>
         <span class="fr"><button ng-click="changePage(pageNum-1)">上一页</button> 总页数:{{maxPage}}</span>
     </div>

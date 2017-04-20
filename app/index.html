@@ -43,9 +43,6 @@
     <script type="text/javascript">
     var db_dy = document.getElementById("db_dy");
     var lis = db_dy.children[0].children;
-    // var db_con = document.getElementById("db_con");
-    // var contents = db_con.children;
-
     for (var i = 0; i < lis.length; i++) {
         lis[i].onclick = function() {
             for (var j = 0; j < lis.length; j++) {
@@ -59,6 +56,7 @@
     <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
     <script type="text/javascript" src="components/httpService.js"></script>
     <script type="text/javascript" src="movie_list/controller.js"></script>
+    <script type="text/javascript" src="movie_detail/controller.js"></script>
     <script type="text/javascript" src="app.js"></script>
 </body>
 

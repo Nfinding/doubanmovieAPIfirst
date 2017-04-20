@@ -4,8 +4,8 @@
     controller('movie_list', ['$scope', '$window', 'httpService', '$route', '$routeParams', function($scope, $window, httpService, $route, $routeParams) {
         $scope.loading = true;
 
-
         var url = "http://api.douban.com/v2/movie/" + $routeParams.api_name;
+
         //页码
 
         $scope.pageNum = $routeParams.pageNum || 1;

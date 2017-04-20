@@ -2,6 +2,7 @@
   'use strict';
   angular.module('app', [
     'ngRoute',
+    'app.movie_detail',
     'app.controllers.movie_list',
     ]).controller('searchController', ['$scope','$route', function ($scope,$route) {
 

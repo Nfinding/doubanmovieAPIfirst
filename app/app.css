@@ -125,7 +125,22 @@ body{
   width: 810px;
   background-color: #fff;
   // height: 500px;
-  padding: 0 0 20px 11px;
+  padding: 20px 0 20px 11px;
+}
+.detail-cont {
+  width: 400px;
+}
+.detail-cont h1{
+  font-size: 35px;
+  color: skyblue;
+  padding-bottom: 20px;
+}
+.detail-img {
+  vertical-align: top;
+}
+.detail-img,.detail-cont{
+  display: inline-block;
+  margin-right: 20px;
 }
 .db-dy li{
   width: 150px;
