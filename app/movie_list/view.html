@@ -1,11 +1,11 @@
 <div class="db-dy fl" id="db_con">
     <div class="have">
-      <ul>
-        <li ng-repeat="movie in subjects">
-          <a href="#"><img ng-src="{{movie.images.large}}"></a>
-          <p><span ng-bind="movie.title"></span> &nbsp;<span ng-bind="movie.rating.average"></span></p>
-        </li>
-      </ul>
+        <ul>
+            <li ng-repeat="movie in subjects">
+                <a href="#"><img ng-src="{{movie.images.large}}"></a>
+                <p><span ng-bind="movie.title"></span> &nbsp;<span ng-bind="movie.rating.average"></span></p>
+            </li>
+        </ul>
     </div>
     <div ng-if="loading" class="loadEffect">
         <span></span>
@@ -17,8 +17,8 @@
         <span></span>
         <span></span>
     </div>
-    <div page>
-      <span class="fl">当前页：{{pageNum}} <button ng-click="changePage(pageNum-0+1)">下一页</button></span>
-      <span class="fr"><button ng-click="changePage(pageNum-1)">上一页</button> 总页数：{{maxPage}}</span>
+    <div>
+        <span class="fl">当前页:{{pageNum}}  <button ng-click="changePage(pageNum-0+1)">下一页</button></span>
+        <span class="fr"><button ng-click="changePage(pageNum-1)">上一页</button> 总页数:{{maxPage}}</span>
     </div>
 </div>

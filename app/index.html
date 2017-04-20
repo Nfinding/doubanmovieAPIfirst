@@ -1,75 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="app.css"/>
-  <title>豆瓣电影</title>
-</head>
-<body ng-app="app">
-<div class="top">
-  <div class="w">
-      <h3 class="fl">豆瓣电影</h3>
-      <div class="login fr">
-        <p>登陆&nbsp;&nbsp;|&nbsp;&nbsp;注册</p>
-      </div>
-  </div>
-</div>
-<div class="search-box">
-  <div class="w">
-    <div class="logo fl">
-      <a href="#"><img src="images/logo.png"></a>
-    </div>
-      <div class="search fl">
-        <input id="search" class="fl" type="text" value="电影、明星、影院、电视剧"><button class="fl"></button>
-        <script type="text/javascript">
-          var search = document.getElementById("search");
-          search.onfocus = function() {
-            if(search.value == "电影、明星、影院、电视剧")
-            {
-              search.value = "";
-              search.style.color = "#333";
-            }
-          }
-          search.onblur = function() {
-            if(search.value == "")
-            {
-              search.value = "电影、明星、影院、电视剧";
-              search.style.color = "#ccc";
-            }
-          }
-        </script>
-      </div>
-  </div>
-</div>
-<div class="content w">
-  <div id="db_dy" class="nav fl">
-    <ul>
-      <li class="current"><a href="#!/in_theaters">正在热映</a></li>
-      <li><a href="#!/coming_soon">即将上映</a></li>
-      <li><a href="#!/top250">TOP250</a></li>
-    </ul>
-  </div>
-  <ng-view></ng-view>
-</div>
-<script type="text/javascript">
-  var db_dy = document.getElementById("db_dy");
-  var lis = db_dy.children[0].children;
-  // var db_con = document.getElementById("db_con");
-  // var contents = db_con.children;
 
-  for(var i = 0; i < lis.length; i++) {
-    lis[i].onclick = function(){
-      for(var j = 0; j < lis.length; j++){
-        lis[j].className = "";
-      }
-    this.className = "current";
-  }
-  }
-</script>
-<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
-<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
-<script type="text/javascript" src="components/httpService.js"></script>
-<script type="text/javascript" src="movie_list/controller.js"></script>
-<script type="text/javascript" src="app.js"></script>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="app.css" />
+    <title>豆瓣电影</title>
+</head>
+
+<body ng-app="app">
+    <div class="top">
+        <div class="w">
+            <h3 class="fl">豆瓣电影</h3>
+            <div class="login fr">
+                <p>登陆&nbsp;&nbsp;|&nbsp;&nbsp;注册</p>
+            </div>
+        </div>
+    </div>
+    <div class="search-box">
+        <div class="w">
+            <div class="logo fl">
+                <a href="#"><img src="images/logo.png"></a>
+            </div>
+            <div class="search fl">
+                <input id="search" class="fl" type="text" placeholder="电影、明星、影院、电视剧">
+                <button class="fl"></button>
+            </div>
+        </div>
+    </div>
+    <div class="content w">
+        <div id="db_dy" class="nav fl">
+            <ul>
+                <li class="current"><a href="#!/in_theaters">正在热映</a></li>
+                <li><a href="#!/coming_soon">即将上映</a></li>
+                <li><a href="#!/top250">TOP250</a></li>
+            </ul>
+        </div>
+        <ng-view></ng-view>
+    </div>
+    <script type="text/javascript">
+    var db_dy = document.getElementById("db_dy");
+    var lis = db_dy.children[0].children;
+    // var db_con = document.getElementById("db_con");
+    // var contents = db_con.children;
+
+    for (var i = 0; i < lis.length; i++) {
+        lis[i].onclick = function() {
+            for (var j = 0; j < lis.length; j++) {
+                lis[j].className = "";
+            }
+            this.className = "current";
+        }
+    }
+    </script>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="components/httpService.js"></script>
+    <script type="text/javascript" src="movie_list/controller.js"></script>
+    <script type="text/javascript" src="app.js"></script>
 </body>
+
 </html>

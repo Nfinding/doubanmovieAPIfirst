@@ -135,6 +135,11 @@ body{
   margin-right: 12px;
   text-align: center;
 }
+.db-dy ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
 .db-dy li img{
   width: 150px;
   height: 210px;
